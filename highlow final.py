@@ -13,7 +13,7 @@ def play_game():
         guess = input(f"Is the secret number higher, lower, or the same as {random_number_2}? ").lower()
         print(f"The secret number was: {random_number_1}")
 
-        # Determine if the guess is correct and add the coins
+        # Check if guess is correct and add 100 coins if it is correct
         if (guess == "higher" and random_number_1 > random_number_2) or  (guess == "lower" and random_number_1 < random_number_2) or (guess == "same" and random_number_1 == random_number_2):
             print("You Win!")
             coins += 100
@@ -21,7 +21,7 @@ def play_game():
         else:
             print("You Lose!")
 
-        # Check if the player has reached 500 coins
+        # Check for Champion Status
         if coins >= 500:
             print("Congratulations! You are the champion!")
             break
